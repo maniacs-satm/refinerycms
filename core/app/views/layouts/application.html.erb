@@ -12,6 +12,9 @@
         <%= render "/refinery/header" -%>
       </header>
       <section id="page">
+        <div id="flash_container">
+          <%= render '/refinery/message' %>
+        </div>
         <%= yield %>
       </section>
       <footer>
