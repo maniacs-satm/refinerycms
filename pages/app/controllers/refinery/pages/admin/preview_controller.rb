@@ -13,6 +13,7 @@ module Refinery
         layout :layout
 
         def show
+          flash.notice = t('refinery.admin.pages.preview.skip_to_first_child', what: "'#{@page.title}'") if @page.skip_to_first_child.present?
           render_with_templates?
         end
 
